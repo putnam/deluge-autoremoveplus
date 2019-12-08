@@ -143,7 +143,8 @@ class GtkUI(GtkPluginBase):
             self.on_click_chk_rule_2
         )
 
-        def on_menu_show(menu, (menu_item, toggled)):
+        def on_menu_show(menu, settings):
+            (menu_item, toggled) = settings
             def set_ignored(ignored):
                 # set_active will raise the 'toggled'/'activated' signals
                 # so block it to not reset the value
@@ -306,7 +307,7 @@ class GtkUI(GtkPluginBase):
     def cb_get_rules(self, rules):
         self.rules.clear()
 
-        for k, v in rules.iteritems():
+        for k, v in rules.items():
             self.rules.append((k, v))
 
     def cb_get_config(self, config):

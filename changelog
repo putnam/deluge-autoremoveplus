@@ -1,3 +1,6 @@
+Version 0.7.0
+- Feature: Support Deluge 2.0 (not backward compatible)
+
 Version 0.6.2
 - Bugfix: Save properly minimum values of specific remove rules in WebUI.
 
